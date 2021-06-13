@@ -40,7 +40,7 @@ function plusSlides(n) {
 
 function showSlides(n) {
   if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1}
+  if (n < 0) { slideIndex = slides.length - 1 }
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.opacity = (i == slideIndex) ? 1 : 0;
   }
@@ -106,8 +106,8 @@ function parseResponse(text) {
   tibdeuDiv.innerHTML = "";
 
   for (let i = 0; i < deutibSorted.length; i++) {
-    let gl = deutibSorted[i]["german"][0].toUpperCase()
-    let tl = tibdeuSorted[i]["transcript"][0].toUpperCase()
+    let gl = deutibSorted[i]["german"] + "?"[0].toUpperCase()
+    let tl = tibdeuSorted[i]["transcript"] + "?"[0].toUpperCase()
     if (gl != currentGermanLetter) {
       deutibDiv.append(makeSeparator(gl));
       currentGermanLetter = gl;
