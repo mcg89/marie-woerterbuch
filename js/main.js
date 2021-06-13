@@ -17,7 +17,8 @@ var deutibSorted = [];
 var tibdeuSorted = [];
 
 function setup() {
-  document.querySelector("#searchbar").addEventListener("keyup", search)
+  // document.querySelector("#searchbar").addEventListener("keyup", search)
+  document.querySelector("#search-form").addEventListener("submit", search)
   window.addEventListener('resize', resizeSlider);
   showSlides(slideIndex);
   window.setInterval(function () {
@@ -131,9 +132,10 @@ function parseResponse(text) {
 var context = "home"
 
 function search(event) {
-  if (event.code !== "Enter") {
-    return;
-  }
+  // if (event.code !== "Enter") {
+  //   return;
+  // }
+  event.preventDefault();
 
   //Switch to search pane
   let activeItem = document.querySelector("section.is-active")
