@@ -157,9 +157,9 @@ function search(event) {
 
   for (let i = 0; i < usedList.length; i++) {
     if (Object.values(usedList[i]).join().search(query) > -1) {
-      let cl = usedList[i]["german"][0].toUpperCase()
+      let cl = (usedList[i]["german"] + "?")[0].toUpperCase()
       if (context === "tibdeu") {
-        cl = usedList[i]["transcript"][0].toUpperCase()
+        cl = (usedList[i]["transcript"][0] + "?").toUpperCase()
       }
 
       if (cl != currentLetter) {
