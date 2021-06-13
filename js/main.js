@@ -71,6 +71,9 @@ function updateDatabase() {
   });
   request.send(null);
 }
+function firstL(string) {
+  return (string + "?")[0].trim().toUpperCase()
+}
 
 function parseResponse(text) {
   let table = text.split("\n");
@@ -86,13 +89,14 @@ function parseResponse(text) {
 
   let sortFunc = function (property) {
     return function (a, b) {
-      if (a[property] > b[property])
+      if (firstL(a[property]) > firstL(b[property]))
         return 1;
-      else if (a[property] < b[property])
+      else if (firstL(a[property]) < firstL(b[property]))
         return -1;
       return 0;
     }
   }
+
 
   deutibSorted.sort(sortFunc("german"));
   tibdeuSorted.sort(sortFunc("transcript"));
@@ -106,8 +110,8 @@ function parseResponse(text) {
   tibdeuDiv.innerHTML = "";
 
   for (let i = 0; i < deutibSorted.length; i++) {
-    let gl = (deutibSorted[i]["german"] + "?")[0].toUpperCase()
-    let tl = (tibdeuSorted[i]["transcript"] + "?")[0].toUpperCase()
+    let gl = firstL(deutibSorted[i]["german"])
+    let tl = firstL(tibdeuSorted[i]["transcript"])
     if (gl != currentGermanLetter) {
       deutibDiv.append(makeSeparator(gl));
       currentGermanLetter = gl;
@@ -157,9 +161,9 @@ function search(event) {
 
   for (let i = 0; i < usedList.length; i++) {
     if (Object.values(usedList[i]).join().search(query) > -1) {
-      let cl = (usedList[i]["german"] + "?")[0].toUpperCase()
+      let cl = firstL(usedList[i]["german"])
       if (context === "tibdeu") {
-        cl = (usedList[i]["transcript"][0] + "?").toUpperCase()
+        cl = firstL(usedList[i]["transcript"])
       }
 
       if (cl != currentLetter) {
