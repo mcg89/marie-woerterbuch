@@ -64,7 +64,6 @@ function updateDatabase() {
   request.open("get", "data/database-latest.csv")
   request.addEventListener('load', function (event) {
     if (request.status >= 200 && request.status < 300) {
-      console.log(request.responseText);
       parseResponse(request.responseText);
     } else {
       console.warn(request.statusText, request.responseText);
