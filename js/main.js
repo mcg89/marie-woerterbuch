@@ -106,8 +106,8 @@ function parseResponse(text) {
   tibdeuDiv.innerHTML = "";
 
   for (let i = 0; i < deutibSorted.length; i++) {
-    let gl = deutibSorted[i]["german"] + "?"[0].toUpperCase()
-    let tl = tibdeuSorted[i]["transcript"] + "?"[0].toUpperCase()
+    let gl = (deutibSorted[i]["german"] + "?")[0].toUpperCase()
+    let tl = (tibdeuSorted[i]["transcript"] + "?")[0].toUpperCase()
     if (gl != currentGermanLetter) {
       deutibDiv.append(makeSeparator(gl));
       currentGermanLetter = gl;
