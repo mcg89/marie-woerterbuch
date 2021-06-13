@@ -78,7 +78,7 @@ function parseResponse(text) {
   deutibSorted = []
   tibdeuSorted = []
 
-  for (let i = 0; i < table.length; i++) {
+  for (let i = 1; i < table.length; i++) {
     let data = table[i].split(";");
     deutibSorted.push({ "german": data[0], "transcript": data[1], "tibet": data[2], "tooltip": data.slice(3) })
     tibdeuSorted.push({ "german": data[0], "transcript": data[1], "tibet": data[2], "tooltip": data.slice(3) })
