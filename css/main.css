@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+div.separator {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    margin-right: -5px;
+    z-index: 999;
+    padding-bottom: 5px;
+}
+
+div.separator::after {
+    content: " ";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(63, 81, 181);
+}
+
+div.hidden {
+    display: none;
+}
+
+.word-card ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.word-card table {
+    width: 100%;
+}
+
+#deutib-content, #tibdeu-content, #search-content {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    transition: all 0.5s ease-in;
+}
+
+.mySlides img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 468px;
+}
+
+/* Caption text */
+
+.mySlides .text {
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.mySlides .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Next & previous buttons */
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -12px;
+}
+
+/* Position the "prev button" to the left */
+
+.prev {
+    left: 5px;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 5px;
+}
