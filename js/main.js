@@ -49,7 +49,9 @@ function showSlides(n) {
 }
 
 function resizeSlider() {
-  document.querySelector(".slideshow-container").style = "height: " + slides[slideIndex].offsetHeight + "px;";
+  if (document.querySelector("section.is-active").id === "home") {
+    document.querySelector(".slideshow-container").style = "height: " + slides[slideIndex].offsetHeight + "px;";
+  }
 }
 
 function updateDatabase() {

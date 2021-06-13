@@ -52,6 +52,7 @@ div.hidden {
     width: 100%;
     position: relative;
     margin-bottom: 20px;
+    transition: all 0.4s ease-in;
 }
 
 .mySlides {
@@ -60,7 +61,7 @@ div.hidden {
     left: 0;
     width: 100%;
     height: min-content;
-    transition: all 0.5s ease-in;
+    transition: all 0.4s ease-in;
 }
 
 .mySlides img {
