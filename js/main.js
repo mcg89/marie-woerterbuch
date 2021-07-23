@@ -163,7 +163,7 @@ function search(event) {
   searchDiv.innerHTML = "";
 
   for (let i = 0; i < usedList.length; i++) {
-    if (Object.values(usedList[i]).join().toLowerCase().search(query.toLowerCase()) > -1) {
+    if (Object.values(usedList[i]).join().toLocaleLowerCase().search(query.toLocaleLowerCase()) > -1) {
       let cl = firstL(usedList[i]["german"])
       if (context === "tibdeu") {
         cl = firstL(usedList[i]["transcript"])
