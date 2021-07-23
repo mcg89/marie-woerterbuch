@@ -196,7 +196,7 @@ function makeCard(cardDetails, mode) {
     word = cardDetails["transcript"];
     translation = "<td>Deutsch: </td><td><b>" + cardDetails["german"] + "</b></td>";
   }
-  let tibet = "<td>Tibetisch: </td><td>" + cardDetails["tibet"] + "</td>";
+  let tibet = "<td class='tibet-text'>Tibetisch: </td><td>" + cardDetails["tibet"] + "</td>";
 
   let tooltip = ""
   cardDetails["tooltip"].forEach(element => {

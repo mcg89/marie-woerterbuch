@@ -28,6 +28,11 @@ div.hidden {
     display: none;
 }
 
+.word-card .tibet-text {
+    font-size: 4em;
+    padding-bottom: 1em;
+}
+
 .word-card ul {
     margin-top: 5px;
     margin-bottom: 5px;
