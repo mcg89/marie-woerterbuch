@@ -202,13 +202,13 @@ function makeCard(cardDetails, mode) {
   cardDetails["tooltip"].forEach(element => {
     if (element.trim() !== "") {
       if (tooltip === "") {
-        tooltip += "<tr><td colspan='2'>Weitere Infos: <br><ul><li>";
+        tooltip += "<tr><td colspan='2'>Weitere Infos: <br><ul>";
       }
-      tooltip += element + "</li><li>"
+      tooltip += "<li>" + element + "</li>"
     }
   });
   if (tooltip !== "") {
-    tooltip += "</li></ul></td></tr>";
+    tooltip += "</ul></td></tr>";
   }
 
   cardDiv.innerHTML = '<div class="mdl-card__title"><h2 class="mdl-card__title-text">' + word + '</h2></div>' +
