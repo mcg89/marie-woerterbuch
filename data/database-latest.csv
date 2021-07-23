@@ -1,5 +1,5 @@
 ﻿Deutsch ;Wylie Transkripton;Tibetisch;Klassik;Modern;Höflichkeitsform
-aber;yin n'i;ཡིན་ནའི།;;;
+aber;yin n'i;ཡིན་ནའི།;Stichpunkt 1; Stichpunkt2; Stichpunkt 3
 aber;yang na yang;ཡང་ན་ཡང།;;;
 abgeschlossen;tshar;ཚར།;;;
 Alphabet, das;ka kha;ཀ་ཁ།;;;
@@ -301,8 +301,8 @@ sie;kho mo;ཁོ་མོ།;;;
 sie;khong;ཁོང།;;;
 sie;kho tsho;ཁོ་ཚོ།;;;
 sie;khong tsho;ཁོང་ཚོ།;;;
-sitzen;bsdad;བསྡད།;;;
-sitzen;bzhugs;བཞུགས།;;;
+sitzen;bsdad;བསྡད། ;modern;;
+sitzen;bzhugs;བཞུགས།;Höflichkeitsform, klassisch;;
 sehen;mthong;མཐོང།;;;
 sehr;ha chang;ཧ་ཅང།;;;
 senden;btang;བཏང།;;;
